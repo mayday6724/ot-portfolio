@@ -1,0 +1,16 @@
+<div class="index">
+    <a href="crafts.html">Crafts</a>
+    <div class="line"></div>
+    <a href="index.html">Experience</a>
+    <div class="line"></div>
+    <a href="cognition.html" class="hide_border">Cognition</a>
+</div>
+
+<script>
+    $(document).ready(function(){	
+        
+        var pn = $("body").data("pagenum");
+        $("a").eq(pn).addClass("ch_bg");
+            
+    });
+</script>
