@@ -21,7 +21,7 @@ h3{
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 1.5px;
     background-color: var(--white);
-    font-size: max(2vw ,20.8px);
+    font-size: max(1vw ,20.8px);
 }
 
 p{
@@ -71,7 +71,7 @@ section{
 	text-decoration:none;
     color: var(--black);
     font-family: 'Josefin Sans', sans-serif;
-    font-size: max(4vw, 32px);
+    font-size: max(3vw, 32px);
     letter-spacing: 1.6px;
 	
 	padding:20px;
@@ -134,11 +134,14 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    margin: auto;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 article .box{
     flex: 1;
-    width: 80%;
 	color: var(--black);
 	background: var(--white);
 	margin-bottom: 30px;
@@ -152,10 +155,12 @@ article .box{
 .imgbox{
 	width:100%;
 	overflow:hidden;
+    aspect-ratio: 4/3;
 }
 
 .box img{
 	width:100%;
+    object-fit: cover;
 }
 
 article h3{
@@ -258,6 +263,7 @@ footer{
         align-items: center;
     }
 
+
     .line{
         height: max(2vw, 50px);
         width: 1px;
@@ -270,6 +276,10 @@ footer{
     .title h3{
         width: 20%;
     }
+
+    .button-37 {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -277,4 +287,17 @@ footer{
     section{
         flex: none;
     }
+
+    article{
+        flex-direction: row;
+    }
+
+    article .box{
+        max-width: 350px;
+    }
+
+    .button-37 {
+        width: 40%;
+    }
+
 }

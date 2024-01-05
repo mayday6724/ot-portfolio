@@ -34,7 +34,9 @@ function getcon(filename) {
 
     $.each(data, function (index, en) {
       var html = '<a class="box">';
-      html += '<img src="' + en["圖片"] + '" class="imgbox">';
+      html += '<div class="imgbox">';
+      html += '<img src="' + en["圖片"] + '">';
+      html += "</div>";
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
       html += "</a>";
@@ -54,7 +56,9 @@ function getcon2(filename) {
 
     $.each(data, function (index, en) {
       var html = '<a class="box">';
-      html += '<img src="' + en["圖片"] + '" class="imgbox">';
+      html += '<div class="imgbox">';
+      html += '<img src="' + en["圖片"] + '">';
+      html += "</div>";
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
       html += "</a>";
@@ -74,7 +78,9 @@ function getcon3(filename) {
 
     $.each(data, function (index, en) {
       var html = '<a class="box">';
-      html += '<img src="' + en["圖片"] + '" class="imgbox">';
+      html += '<div class="imgbox">';
+      html += '<img src="' + en["圖片"] + '">';
+      html += "</div>";
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
       html += "</a>";
