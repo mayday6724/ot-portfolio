@@ -33,12 +33,14 @@ function getcon(filename) {
     $("article").empty();
 
     $.each(data, function (index, en) {
-      var html = '<a class="box">';
+      var html = '<a href="page02.html" class="box">';
       html += '<div class="imgbox">';
       html += '<img src="' + en["圖片"] + '">';
       html += "</div>";
+      html += '<div class="textbox">';
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
+      html += "</div>";
       html += "</a>";
 
       if (en["分類"] == "體驗") {
@@ -55,12 +57,14 @@ function getcon2(filename) {
     $("article").empty();
 
     $.each(data, function (index, en) {
-      var html = '<a class="box">';
+      var html = '<a href="page02.html" class="box">';
       html += '<div class="imgbox">';
       html += '<img src="' + en["圖片"] + '">';
       html += "</div>";
+      html += '<div class="textbox">';
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
+      html += "</div>";
       html += "</a>";
 
       if (en["分類"] == "手工藝") {
@@ -77,12 +81,14 @@ function getcon3(filename) {
     $("article").empty();
 
     $.each(data, function (index, en) {
-      var html = '<a class="box">';
+      var html = '<a href="page02.html" class="box">';
       html += '<div class="imgbox">';
       html += '<img src="' + en["圖片"] + '">';
       html += "</div>";
+      html += '<div class="textbox">';
       html += "<h3>" + en["品名"] + "</h3>";
       html += "<p>" + en["介紹"] + "</p>";
+      html += "</div>";
       html += "</a>";
 
       if (en["分類"] == "認知") {

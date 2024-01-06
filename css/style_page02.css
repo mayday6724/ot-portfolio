@@ -273,7 +273,7 @@ footer{
         height: 100vh;
     } */
 
-    .nested{
+    /* .nested{
         border: 1px solid var(--white);
         color: var(--white);
     }
@@ -281,6 +281,6 @@ footer{
     .nested:hover{
         border: 1px solid var(--black);
         color: var(--black);
-    }
+    } */
     
 }
