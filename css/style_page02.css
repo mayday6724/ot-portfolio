@@ -12,17 +12,18 @@
     --maintheme: #FFF4E5;
     --black: #231B1B;
     --white: #FFFFFB;
-    --purple: rgba(132, 90, 109, 1);
+    --purple: #6F3A52;
     --light-purple: rgba(132, 90, 109, 0.5);
 }
 
 body{
     background-color: var(--maintheme);
+    box-sizing: border-box;
 }
 
 h1{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 50px;
+    font-size: min(10vw, 50px);
     letter-spacing: 1.5px;
     padding: 20px 0px;
 }
@@ -38,12 +39,21 @@ p{
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 1.5px;
     line-height: 150%;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+}
+
+span{
+    color: var(--white);
+    font-family: 'Noto Sans TC', sans-serif;
+    /* letter-spacing: 1.5px; */
+    font-size: 12px;
 }
 
 /*main*/
 main{
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     flex-direction: column;
     width: 100vw;
     align-items: center;
@@ -52,6 +62,9 @@ main{
 
 /*section*/
 section{
+    flex: 1;
+    height: 100vh;
+
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -59,9 +72,9 @@ section{
 }
 
 section .box_video{
-    padding: 10vw;
+    padding: 5vw;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/3;
 
     justify-self: center; /*對齊column*/
 	align-self: center; /*對齊row*/
@@ -80,12 +93,13 @@ section p{
 .box_video iframe{
     padding: 20px 0px;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/9;   
 }
 
 .box_banner{
+    
     grid-column: 1;
-    grid-row: 2/5;
+    grid-row: 3/6;
     
     background: url(../img/banner04.jpg) no-repeat center;
     background-size: cover;
@@ -93,7 +107,7 @@ section p{
 
 .box_button{
     grid-column: 1;
-    grid-row: 4/5;
+    grid-row: 5/6;
 
     display: grid;
     grid-template-columns: 20vw 1fr 20vw;
@@ -117,8 +131,15 @@ section a{
     padding: 25px;
 }
 
+.nested:hover{
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
 /*article*/
 article{
+    flex: 1;
+    
     margin-top: 90px;
     display: flex;
     flex-direction: column;
@@ -157,14 +178,13 @@ footer{
     padding: 30px 0px;
     margin-top: 90px;
     background-color: var(--light-purple);
-    color: var(--black);
+    color: var(--purple);
 }
 
 /*medium devices*/
 @media only screen and (min-width: 768px){
     
     section{
-        flex: none;
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: minmax(200px, auto); /*希望垂直部分自動生成, 所以用auto rows, 基本是200px, 其他均分*/
         grid-column-gap: 20px;
@@ -218,6 +238,11 @@ footer{
         padding: 25px;
     }
 
+    .nested:hover{
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
+
     article{
         flex-direction: row;
         width: 80%;
@@ -239,6 +264,23 @@ footer{
             order:1;
         }
 	} 
-    
+}
 
+
+/*laptop*/
+@media only screen and (min-width:1024px){
+    /* section{
+        height: 100vh;
+    } */
+
+    .nested{
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
+
+    .nested:hover{
+        border: 1px solid var(--black);
+        color: var(--black);
+    }
+    
 }
